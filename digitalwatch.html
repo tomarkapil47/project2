@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="form.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="form-control">
+            <div class="header">
+                <h4>Sing-Up</h4>
+            </div>
+           <div class="form-box">
+            <form action="#" onsubmit=" return validateForm()">
+               <div class="box">
+                   <input type="text" placeholder="Username" id="user" class="data">
+                   <span id="span-1"></span>
+               </div>
+               <div class="box">
+                   <input type="email" placeholder="Email" id="email" class="data">
+                   <span id="span-2"></span>
+               </div>
+               <div class="box">
+                   <input type="text" placeholder="Password" id="pass" class="data">
+                   <span id="span-3"></span>
+               </div>
+               <div class="box">
+                   <input type="text" placeholder="confirm Password" id="confirm" class="data">
+                   <span id="span-4"></span>
+               </div>
+               <div class="box">
+                   <input type="text" placeholder="mobile number" id="number" class="data">
+                   <span id="span-5"></span>
+               </div>
+               <input type="submit" value="submit">
+            </form>
+           </div>
+        </div>
+    </div>
+    <script>
+       
+        function validateForm(){
+            var fname=document.getElementById("user").value;
+            var email=document.getElementById("email").value;
+            var pass=document.getElementById("pass").value;
+            var confirm=document.getElementById("confirm").value;
+            var num=document.getElementById("number").value;
+           
+        
+            if(fname.length==""){
+              document.getElementById("span-1").innerHTML="***please Enter The Name";
+              fname.preventDefault();
+              return false;
+            }
+             if(email.length==""){
+                document.getElementById("span-2").innerHTML="***Please Enter your email-id";
+                return false;
+
+            }
+             if(pass.length==""){
+                document.getElementById("span-3").innerHTML="***Please Enter The Password";
+                return false;
+
+            }
+             if(confirm.length==""){
+                document.getElementById("span-4").innerHTML="***Please confirm the password ";
+                return false;
+
+            }
+             if(num.length==""){
+                document.getElementById("span-5").innerHTML="***Please Enter Your Mobile Number ";
+                return false;
+
+            }
+              
+            
+        }
+    </script>
+    
+</body>
+</html>
